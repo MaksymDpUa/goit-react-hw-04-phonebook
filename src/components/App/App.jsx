@@ -6,7 +6,7 @@ import { Form } from '../Form/Form';
 import css from './App.module.css';
 
 export const App = () => {
-  const [contacts, setContacts] = useState(
+  const [contacts, setContacts] = useState(()=>
     JSON.parse(localStorage.getItem('contacts') ?? [])
   );
   const [filter, setFilter] = useState('');
